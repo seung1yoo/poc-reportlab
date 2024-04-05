@@ -1,4 +1,5 @@
 
+# https://nicd.org.uk/knowledge-hub/creating-pdf-reports-with-reportlab-and-pandas
 
 
 from reportlab.platypus import Frame
@@ -51,6 +52,7 @@ from reportlab.lib.units import inch
 
 def fig2image(f):
     buf = io.BytesIO()
+    print(buf)
     f.savefig(buf, format='png', dpi=300)
     buf.seek(0)
     x, y = f.get_size_inches()
